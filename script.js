@@ -15,6 +15,21 @@
   });
 })();
 
+/* --- Noun Project service icons --- */
+(function () {
+  var pageIcons = document.querySelectorAll('.service-icon');
+  var icons = location.pathname.endsWith('sluzby.html')
+    ? ['icon-coffee-cup.png', 'icon-love-dog.png', 'icon-pet-shop.png', 'icon-sun.png']
+    : location.pathname.endsWith('index.html') || location.pathname.endsWith('/')
+      ? ['icon-dog-groom.png', 'icon-consultation.png', 'icon-pet-book.png']
+      : [];
+
+  icons.forEach(function (icon, index) {
+    if (!pageIcons[index]) return;
+    pageIcons[index].innerHTML = '<img src="' + icon + '" alt="">';
+  });
+})();
+
 /* --- Image fallback: swap to placeholder when image is missing --- */
 (function () {
   var imgSlots = document.querySelectorAll('.img-slot');

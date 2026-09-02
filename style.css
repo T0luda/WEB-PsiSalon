@@ -205,6 +205,7 @@ h1, h2, h3, h4 {
 }
 .service-card:hover { transform: translateY(-4px); box-shadow: 0 8px 32px rgba(123,45,142,.1); }
 .service-icon { width: 48px; height: 48px; margin: 0 auto 16px; color: var(--plum); }
+.service-icon img { width: 100%; height: 100%; object-fit: contain; display: block; }
 .service-icon svg { width: 100%; height: 100%; fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
 .service-card h4 { font-size: 1.1rem; margin-bottom: 8px; }
 .service-card p { font-size: .85rem; color: var(--text-light); }
