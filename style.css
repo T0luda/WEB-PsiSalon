@@ -160,6 +160,39 @@ h1, h2, h3, h4 {
 .btn-rose { background: var(--rose); color: var(--plum-dark); border: 1px solid var(--rose); }
 .btn-rose:hover { background: #f0c4d4; border-color: #f0c4d4; }
 
+/* ===== QUOTE ===== */
+.quote-section {
+  background: var(--cream);
+  color: var(--text);
+  padding: 22px 0 8px;
+}
+.quote-card {
+  max-width: 620px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 8px 20px;
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+.quote-card blockquote {
+  font-family: 'Parisienne', cursive;
+  font-size: clamp(1.5rem, 2.5vw, 1.9rem);
+  color: var(--plum);
+  line-height: 1.35;
+  font-style: italic;
+  font-weight: 400;
+}
+.quote-mark {
+  display: block;
+  font-family: 'Parisienne', cursive;
+  font-size: 2rem;
+  color: var(--gold);
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
 /* ===== SECTIONS ===== */
 .section { padding: 80px 0; }
 .section-alt { background: var(--rose); }
