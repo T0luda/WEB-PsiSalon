@@ -49,8 +49,24 @@
           <h3>Kde nás najdete</h3>
 
           <div class="contact-detail">
-            <span class="contact-detail-label">Adresa</span>
+            <span class="contact-detail-label">Provozovatel</span>
+            <span class="contact-detail-value">Lovásková Lucia</span>
+          </div>
+          <div class="contact-detail">
+            <span class="contact-detail-label">Název</span>
+            <span class="contact-detail-value">Dog Wellness psí salon</span>
+          </div>
+          <div class="contact-detail">
+            <span class="contact-detail-label">Adresa provozovny</span>
             <span class="contact-detail-value">Jar. Staši 1148<br>Zlín-Malenovice, 763 02</span>
+          </div>
+          <div class="contact-detail">
+            <span class="contact-detail-label">Fakturační adresa</span>
+            <span class="contact-detail-value">Oldřichovská 191, Pohořelice Zlín</span>
+          </div>
+          <div class="contact-detail">
+            <span class="contact-detail-label">IČO</span>
+            <span class="contact-detail-value">07949260</span>
           </div>
           <div class="contact-detail">
             <span class="contact-detail-label">Telefon</span>
@@ -65,43 +81,18 @@
             <span class="contact-detail-value">Pondělí 9:00–18:00<br>Úterý–čtvrtek 8:00–18:00<br>Pátek od 8:00 dle objednávek</span>
           </div>
 
+          <div class="contact-social-links">
+            <a class="social-link" href="https://www.facebook.com/Dogwellnesspsisalon/?locale=cs_CZ" target="_blank" rel="noopener" aria-label="Facebook">
+              <span class="social-text">Facebook</span>
+            </a>
+            <a class="social-link" href="https://www.instagram.com/dogwellnesspsisalon/" target="_blank" rel="noopener" aria-label="Instagram">
+              <span class="social-text">Instagram</span>
+            </a>
+          </div>
+
           <div style="margin-top:32px;padding:24px;background:var(--rose);border-radius:16px;">
             <p style="font-size:.92rem;color:var(--text);line-height:1.7;">Těšíme se na vás i vašeho pejska! Mezitím vám ráda nabídnu kávu a společně poradíme, co bude pro vašeho nejlepšího přítele to nejlepší.</p>
           </div>
-        </div>
-
-        <!-- Contact Form -->
-        <div>
-          <form class="contact-form" id="contactForm" novalidate>
-            <h3 class="section-title" style="font-size:1.4rem;margin-bottom:24px;">Napište nám</h3>
-
-            <div class="form-group">
-              <label for="name">Jméno *</label>
-              <input type="text" id="name" name="name" required placeholder="Vaše jméno">
-            </div>
-
-            <div class="form-group">
-              <label for="email">E-mail *</label>
-              <input type="email" id="email" name="email" required placeholder="vas@email.cz">
-            </div>
-
-            <div class="form-group">
-              <label for="phone">Telefon</label>
-              <input type="tel" id="phone" name="phone" placeholder="+420 608 891 724">
-            </div>
-
-            <div class="form-group">
-              <label for="message">Zpráva *</label>
-              <textarea id="message" name="message" required placeholder="Napište nám, s čím vám můžeme pomoct..."></textarea>
-            </div>
-
-            <button type="submit" class="btn btn-primary" style="width:100%;text-align:center;">Odeslat zprávu</button>
-            <p class="form-note">* Povinné údaje. Odpovíme vám do 24 hodin.</p>
-
-            <p id="formSuccess" style="display:none;margin-top:16px;padding:12px;background:rgba(76,175,80,.1);color:#388E3C;border-radius:8px;font-size:.9rem;text-align:center;">
-              Děkujeme za zprávu! Ozveme se vám co nejdříve.
-            </p>
-          </form>
         </div>
 
       </div>
@@ -124,38 +115,16 @@
   <footer class="footer">
     <div class="container">
       <div class="footer-logo"><img src="logo.jpg" alt="Dog Wellness logo"><span class="brand-name">Dog Wellness<small>Psi salon</small></span></div>
-      <p>Jar. Staši 1148, Zlín-Malenovice, 763 02<br><a href="tel:+420608891724">+420 608 891 724</a> · <a href="mailto:ligrica@gmail.com">ligrica@gmail.com</a><br>Pondělí 9:00–18:00 · Úterý–čtvrtek 8:00–18:00 · Pátek od 8:00 dle objednávek</p>
+      <p>Dog Wellness psí salon<br>Jar. Staši 1148, Zlín-Malenovice, 763 02<br>Oldřichovská 191, Pohořelice Zlín<br><a href="tel:+420608891724">+420 608 891 724</a> · <a href="mailto:ligrica@gmail.com">ligrica@gmail.com</a><br>IČO 07949260<br>Pondělí 9:00–18:00 · Úterý–čtvrtek 8:00–18:00 · Pátek od 8:00 dle objednávek</p>
+      <div class="footer-social-links">
+        <a class="social-link footer-social-link" href="https://www.facebook.com/Dogwellnesspsisalon/?locale=cs_CZ" target="_blank" rel="noopener" aria-label="Facebook">Facebook</a>
+        <a class="social-link footer-social-link" href="https://www.instagram.com/dogwellnesspsisalon/" target="_blank" rel="noopener" aria-label="Instagram">Instagram</a>
+      </div>
       <p>&copy; 2026 Dog Wellness — Psi salon. Všechna práva vyhrazena.</p>
     </div>
   </footer>
 
-  <!-- ===== FORM HANDLING ===== -->
-  <script>
-    (function () {
-      var form = document.getElementById('contactForm');
-      if (!form) return;
-      form.addEventListener('submit', function (e) {
-        e.preventDefault();
-        var name = document.getElementById('name').value.trim();
-        var email = document.getElementById('email').value.trim();
-        var msg = document.getElementById('message').value.trim();
 
-        // Basic validation
-        if (!name || !email || !msg) {
-          alert('Vyplňte prosím všechna povinná pole (jméno, e-mail, zpráva).');
-          return;
-        }
-        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-          alert('Zadejte prosím platný e-mail.');
-          return;
-        }
-
-        // Success message (static demo — no backend)
-        document.getElementById('formSuccess').style.display = 'block';
-        form.reset();
-      });
-    })();
-  </script>
   <script src="script.js"></script>
 </body>
 </html>

@@ -281,9 +281,33 @@ h1, h2, h3, h4 {
 /* ===== CONTACT ===== */
 .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; margin-top: 48px; }
 .contact-info h3 { font-size: 1.2rem; margin-bottom: 20px; }
-.contact-detail { display: flex; gap: 12px; margin-bottom: 20px; align-items: flex-start; }
+.contact-info {
+  text-align: center;
+}
+.contact-detail {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+  align-items: flex-start;
+  justify-content: center;
+}
 .contact-detail-label { font-weight: 600; color: var(--plum); min-width: 80px; font-size: .9rem; }
 .contact-detail-value { font-size: .92rem; color: var(--text-light); }
+
+.contact-social-links,
+.footer-social-links { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; justify-content: center; margin-top: 20px; }
+.contact-social-links { justify-content: center; }
+.social-link {
+  display: inline-flex; align-items: center; justify-content: center;
+  padding: 10px 16px; border-radius: 999px; border: 1px solid var(--gold);
+  font-size: .82rem; font-weight: 600; color: var(--plum); background: var(--white);
+  transition: background .25s ease, color .25s ease, transform .25s ease;
+}
+.social-link:hover { background: var(--plum); color: var(--white); }
+.footer-social-links .social-link {
+  background: transparent; border-color: var(--rose); color: var(--rose);
+}
+.footer-social-links .social-link:hover { background: var(--rose); color: var(--plum-dark); }
 
 .contact-form { background: var(--white); border-radius: 16px; padding: 40px; box-shadow: 0 2px 16px rgba(123,45,142,.06); }
 .form-group { margin-bottom: 24px; }
